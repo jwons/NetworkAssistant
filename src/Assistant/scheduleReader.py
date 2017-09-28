@@ -22,7 +22,6 @@ class scheduleReader(object):
         #the closet that is to be checked
         self.closetSchedule = {}
         
-        #Open the file, to iron out issues with encoding, use the codecs to open
         #Use a csvreader to then loop through the csv and then add each
         #row to the schedule so that the day of the month is the key to the building
         with open('schedule.csv','rU') as surveyFile:
