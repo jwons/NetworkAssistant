@@ -6,14 +6,11 @@ Created on Aug 20, 2017
 import csv 
 import datetime
 
-class scheduleReader(object):
-    '''
-    classdocs
-    '''
+class ScheduleReader(object):
     
     def __init__(self):
         #This variable will hold the survey schedule that will be read in from a file each time
-        #the program is run.It is a dict object where the day of the month is th ekey to
+        #the program is run. It is a dict object where the day of the month is the key to
         #the building that is to be surveyed
         self.surveySchedule = {}
         
