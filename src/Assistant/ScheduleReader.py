@@ -24,7 +24,7 @@ class ScheduleReader(object):
         with open('schedule.csv','rU') as surveyFile:
             surveyReader = csv.reader(surveyFile)
             for row in surveyReader:
-                self.surveySchedule[row[0]] = row[1]
+                self.surveySchedule[row[0]] = [row[1], row[2]]
         
         with open('closets.csv','rU') as closetFile:
             closetReader = csv.reader(closetFile)
