@@ -15,10 +15,6 @@ At the moment it reads schedules given to it through .csv files to show the empl
 
 The current plan is to use the program to keep track of who is doing surveys and closet checks as well. This way we can switch over from the printed out hard copy. Further future work is add RT features and functionality. 
 
-# What is the timeline for this project?
-
-I work on it when I have time. Which is sporadic. 
-
 # Libraries used
 
 appJar was used to create the user interface for this project: http://appjar.info/
