@@ -19,6 +19,8 @@ The current plan is to use the program to keep track of who is doing surveys and
 
 I work on it when I have time. Which is sporadic. 
 
-# When will it be done?
+# Libraries used
 
-Is any software project every *truly* done forever?
+appJar was used to create the user interface for this project: http://appjar.info/
+
+Python rtkit for Request Tracker was previously used, but not at the moment.
