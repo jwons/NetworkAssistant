@@ -41,15 +41,22 @@ class DailyLogResource(object):
                 self.currentEntry.append(building)
                 
             def writeOut(self):
-                if len(self.currentEntry) == 2:
-                    self.monthlyLog[self.dayOfTheMonth-1] = [self.dayOfTheMonth, self.currentEntry[0], self.currentEntry[1], "", ""]
-                elif len(self.currentEntry) == 4:
-                    self.monthlyLog[self.dayOfTheMonth] = [self.dayOfTheMonth, 
-                                                           self.currentEntry[0],
+                #There will either be one(3 entries) or two surveys done (5 entries)
+                if len(self.currentEntry) == 3:
+                    if len(self.monthlyLog) != self.dayOfTheMonth:
+                        while len(self.monthlyLog) < self.dayOfTheMonth:
+                            self.monthlyLog.append([])
+                    self.monthlyLog[self.dayOfTheMonth - 1] = [self.currentEntry[0], self.currentEntry[1], self.currentEntry[2], "", ""]
+                if len(self.currentEntry) == 5:
+                    if len(self.monthlyLog) != self.dayOfTheMonth:
+                        while len(self.monthlyLog) < self.dayOfTheMonth:
+                            self.monthlyLog.append([])
+                    self.monthlyLog[self.dayOfTheMonth - 1] = [self.currentEntry[0],
                                                            self.currentEntry[1],
                                                            self.currentEntry[2],
-                                                           self.currentEntry[3]]
-                length = len(self.monthlyLog)
+                                                           self.currentEntry[3],
+                                                           self.currentEntry[4]]
+    
                 with open (self.filename, 'wb') as logFile:
                     logWriter = csv.writer(logFile, delimiter =',')
                     logWriter.writerows(self.monthlyLog)

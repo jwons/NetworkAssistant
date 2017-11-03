@@ -5,9 +5,9 @@ Created on Aug 20, 2017
 '''
 
 from Tkinter import *
-from Assistant import ScheduleReader
-from Assistant import DailyLogResource
-from Assistant import MainWindow
+import ScheduleReader
+import DailyLogResource
+import MainWindow
 
 if __name__ == '__main__':
     #Create a ScheduleReader object that will read in the closet and survey schedules so that
