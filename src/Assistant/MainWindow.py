@@ -49,12 +49,12 @@ class MainWindow(object):
         self.reminderLabel = Label(frame, text="Always be checking RT!!")
         self.reminderLabel.pack()
         
-    #This function creates the window and text box for an employee to log a survey
+    #This function creates the window and text box for an employee to log a academic survey
     def academicEntry(self):
         self.userEntryWindow = Tk()
         self.userEntryWindow.bind('<Return>', self.submitAcademicEntry)
         
-        instructionsLabel = Label(self.userEntryWindow, text="Who conducted this survey?")
+        instructionsLabel = Label(self.userEntryWindow, text="Who conducted the " + self.academicSurvey + " survey?")
         instructionsLabel.pack()
         
         self.userAcademicEntry = Entry(self.userEntryWindow)
@@ -65,12 +65,13 @@ class MainWindow(object):
         entryButton.pack()
         
         self.userEntryWindow.mainloop()   
-          
+    
+     #This function creates the window and text box for an employee to log a academic survey
     def residenceEntry(self):
         self.userEntryWindow = Tk()
         self.userEntryWindow.bind('<Return>', self.submitResidenceEntry)
         
-        instructionsLabel = Label(self.userEntryWindow, text="Who conducted this survey?")
+        instructionsLabel = Label(self.userEntryWindow, text="Who conducted the " + self.residenceSurvey + " survey?")
         instructionsLabel.pack()
         
         self.userResidenceEntry = Entry(self.userEntryWindow)

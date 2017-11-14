@@ -16,7 +16,10 @@ if __name__ == '__main__':
     
     with DailyLogResource.DailyLogResource() as dailyLog:
         root = Tk()
+        root.wm_title("Network Assistant")
        
         window = MainWindow.MainWindow(root, dailyLog)
+        
+        
         
         root.mainloop()
