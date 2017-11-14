@@ -32,9 +32,15 @@ class DailyLogResource(object):
                     with open(self.filename, 'rU') as logFile:
                         logReader = csv.reader(logFile)
                         for row in logReader:
-                            self.monthlyLog.append([row[0], row[1], row[2], row[3], row[4]])
+                            tempArr = []
+                            for element in row:
+                                tempArr.append(element)
+                            self.monthlyLog.append(tempArr)
                         
                     logFile.close()
+                
+                while (len(self.monthlyLog) < self.dayOfTheMonth - 1):
+                    self.monthlyLog.append([len(self.monthlyLog) + 1])
         
             def addEntry(self,name,building):
                 self.currentEntry.append(name)
